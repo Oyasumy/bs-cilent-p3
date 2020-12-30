@@ -12,6 +12,11 @@ const route = [
     exact: true,
   },
   {
+    path: "/bs-cilent-p3",
+    main: HomePage,
+    exact: true,
+  },
+  {
     path: "/detail-product",
     main: DetailProduct,
     exact: false,
