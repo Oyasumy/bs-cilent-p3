@@ -4,7 +4,7 @@ import ErrorPage from "./component/ErrorPage";
 import HomePage from "./component/Home";
 import ListProduct from "./component/ListProduct/index";
 import Personal from "./component/Personal";
-const homePage="/bs-cilent-p3";
+export const homePage="/bs-cilent-p3";
 const route = [
   {
     path: "/",

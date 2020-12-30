@@ -6,6 +6,7 @@ import * as actionModal from "../../actions/modal";
 import * as actionBooks from "../../actions/book";
 import Swal from "sweetalert2";
 import { loadCategory, loadCustomer } from "../../commons/callApi";
+import { homePage } from "../../router";
 
 const NavBar = ({ isShow, actionModal, customerState, actionBook }) => {
   const history=useHistory();
@@ -93,7 +94,7 @@ const NavBar = ({ isShow, actionModal, customerState, actionBook }) => {
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav ml-auto">
-            <MenuLink to="/" exactOnlyWhenActive={false} label="HOME" />
+            <MenuLink to={`${homePage}`} exactOnlyWhenActive={false} label="HOME" />
 
             {/* <li class="nav-item">
               <a class="nav-link page-scroll" href="#header">
@@ -125,7 +126,7 @@ const NavBar = ({ isShow, actionModal, customerState, actionBook }) => {
 
             {/* <!-- end of dropdown menu --> */}
 
-            <MenuLink label="ALL PRODUCT" to="list-product" exactOnlyWhenActive={false} />
+            <MenuLink label="ALL PRODUCT" to={`${homePage}/list-product`} exactOnlyWhenActive={false} />
 
             {/* <li class="nav-item">
               <a class="nav-link page-scroll" href="#contact">
@@ -135,7 +136,7 @@ const NavBar = ({ isShow, actionModal, customerState, actionBook }) => {
             {customerState.isLogin ? (
               <>
               <li class="nav-item">
-                  <Link to="personal" link={true}>
+                  <Link to={`${homePage}/personal` } link={true}>
                     <a class="nav-link page-scroll" href>
                       <i class="far fa-user"></i> {customerState.isLogin ? customerState.data.NameCustomer : "Hello"}
                     </a>

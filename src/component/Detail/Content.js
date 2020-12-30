@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { homePage } from "../../router";
 import Search from "../ListProduct/Search";
 // import ShowDetail from "./DetailProduct";
 import Product from "./Product";
@@ -18,11 +19,11 @@ const Content = ({data,samePro}) => {
           <div class="row">
             <div class="col-lg-12">
               <div class="breadcrumbs">
-                <Link to="/" link={true}>
+                <Link to={`${homePage}`} link={true}>
                   <a href>Home</a>
                 </Link>
                 <i class="fa fa-angle-double-right"></i>
-                <Link to="/list-product" link={true}>
+                <Link to={`${homePage}/list-product`} link={true}>
                   <a href>All Product</a>
                 </Link>
                 <i class="fa fa-angle-double-right"></i>
