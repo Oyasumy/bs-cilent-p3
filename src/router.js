@@ -4,7 +4,7 @@ import ErrorPage from "./component/ErrorPage";
 import HomePage from "./component/Home";
 import ListProduct from "./component/ListProduct/index";
 import Personal from "./component/Personal";
-
+const homePage="/bs-cilent-p3";
 const route = [
   {
     path: "/",
@@ -12,32 +12,32 @@ const route = [
     exact: true,
   },
   {
-    path: "/bs-cilent-p3",
+    path: `${homePage}`,
     main: HomePage,
     exact: true,
   },
   {
-    path: "/detail-product",
+    path: `${homePage}/detail-product`,
     main: DetailProduct,
     exact: false,
   },
   {
-    path: "/list-product",
+    path: `${homePage}/list-product`,
     main: ListProduct,
     exact: false,
   },
   {
-    path: "/list-cart",
+    path: `${homePage}/list-cart`,
     main: Cart,
     exact: false,
   },
   {
-    path: "/personal",
+    path: `${homePage}/personal`,
     main: Personal,
     exact: false,
   },
   {
-    path: "/error",
+    path: `${homePage}/error`,
     main: ErrorPage,
     exact: false,
   },
